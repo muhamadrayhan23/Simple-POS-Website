@@ -128,7 +128,7 @@ Hanya menyembunyikan/menampilkan `<section>` tanpa routing tambahan.
 ![Halaman Utama](img/index.png)
 
 ### Halaman Tambah Produk
-![Halaman Tambah](img/add.png)
+![Halaman Tambah](img/tambah.png)
 
 ### Halaman Laporan Transaksi
-![Halaman Laporan(Assets/report.png)
+![Halaman Laporan](img/laporan.png)
