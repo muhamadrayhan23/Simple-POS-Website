@@ -76,7 +76,7 @@ Helper:
 
 ---
 
-## 🔄 State Management
+##  State Management
 
 ### **Produk**
 
@@ -112,7 +112,7 @@ renderTransactions();
 
 ---
 
-## 📄 Navigasi Halaman
+##  Navigasi Halaman
 
 Navigasi menggunakan fungsi:
 
