@@ -1,7 +1,3 @@
-# Simple-POS-Website
-Simple POS Website using HTML, TailwindCSS, and JS
-
----
 
 # Simple Point of Sale (POS) — HTML, TailwindCSS, Vanilla JavaScript
 
