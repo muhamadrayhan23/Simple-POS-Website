@@ -122,6 +122,13 @@ showPage(page)
 
 Hanya menyembunyikan/menampilkan `<section>` tanpa routing tambahan.
 
----
+## Tampilan Aplikasi
 
-Jika ingin, saya bisa bantu buat **README versi markdown lengkap dengan screenshot dan struktur folder**.
+### Halaman Utama
+![Halaman Utama](img/index.png)
+
+### Halaman Tambah Produk
+![Halaman Tambah](img/add.png)
+
+### Halaman Laporan Transaksi
+![Halaman Laporan(Assets/report.png)
