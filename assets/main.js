@@ -338,14 +338,15 @@ document.getElementById("checkoutBtn").addEventListener("click", () => {
 
     // Simpan data transaksi
     const newTransaction = {
-        id: Date.now(),
-        date: new Date().toLocaleString("id-ID"),
-        items: cart.map(item => ({
-            id: item.id,
-            name: item.name,
-            price: item.price,
-            qty: item.qty
-        })),
+        id, date: new Date().toLocaleString("id-ID"), items:
+            cart.map(item =>
+            ({
+                id: item.id,
+                date: item.date,
+                name: item.name,
+                price: item.price,
+                qty: item.qty
+            })),
         subtotal,
         discount,
         total
