@@ -132,3 +132,53 @@ Hanya menyembunyikan/menampilkan `<section>` tanpa routing tambahan.
 
 ### Halaman Laporan Transaksi
 ![Halaman Laporan](img/laporan.png)
+
+## Kendala Yang Ditemukan Pada Saat Pengerjaan
+Kendala: Laporan transaksi tidak ter-render
+
+Saat membuka halaman report, data transaksi tidak muncul sama sekali.
+Beberapa error yang muncul:
+
+renderTransactions is not defined
+
+getTransactions is not defined
+
+Cannot read properties of undefined (reading 'toLocaleString')
+
+✔ Penyebab Utama
+
+Fungsi renderTransactions dan getTransactions tidak berada di scope global sehingga tidak bisa dipanggil oleh showPage().
+
+Pada proses checkout, data transaksi disimpan menggunakan:
+
+transactions.push(Transaction); // SALAH
+
+
+yang menyebabkan object transaksi sebenarnya tidak pernah tersimpan.
+
+Ada item transaksi yang tidak memiliki properti subtotal, sehingga toLocaleString() memunculkan error.
+
+✔ Solusi yang Diterapkan
+
+Memindahkan fungsi renderTransactions() dan getTransactions() ke scope global, sehingga dapat dipanggil dari mana saja.
+
+Memperbaiki proses penyimpanan transaksi, mengganti:
+
+transactions.push(Transaction)
+
+
+menjadi:
+
+transactions.push(newTransaction)
+
+
+Memperbaiki struktur data item, sehingga setiap item memiliki nilai price, qty, dan subtotal.
+
+Menambah fallback:
+
+(i.price * i.qty).toLocaleString("id-ID")
+
+
+jika subtotal tidak tersedia.
+
+Dengan perbaikan ini, halaman laporan transaksi akhirnya dapat menampilkan seluruh riwayat transaksi dengan benar.
