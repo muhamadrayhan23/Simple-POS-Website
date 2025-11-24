@@ -382,7 +382,7 @@ function renderTransactions() {
         const itemsHTML = tx.items.map(i => `
             <div class="flex justify-between text-sm">
                 <span>${i.name} (x${i.qty})</span>
-                <span>Rp${(0)}</span>
+                <span>${formatRupiah(i.price)} x ${i.qty}</span>
             </div>
         `).join("");
 
@@ -397,17 +397,17 @@ function renderTransactions() {
 
                  <div class="flex justify-between text-green-600">
                     <span>Subtotal</span>
-                    <span>-Rp${tx.subtotal.toLocaleString("id-ID")}</span>
+                    <span>-${formatRupiah(tx.subtotal)}</span>
                 </div>
 
                 <div class="flex justify-between text-green-600">
                     <span>Diskon 20%</span>
-                    <span>-Rp${tx.discount.toLocaleString("id-ID")}</span>
+                    <span>-${formatRupiah(tx.discount)}</span>
                 </div>
 
                 <div class="flex justify-between font-bold text-blue-600 text-lg mt-2">
                     <span>Total</span>
-                    <span>Rp${tx.total.toLocaleString("id-ID")}</span>
+                    <span>${formatRupiah(tx.total)}</span>
                 </div>
             </div>
         `;
